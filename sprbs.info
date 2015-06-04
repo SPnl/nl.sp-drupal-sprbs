@@ -1,0 +1,5 @@
+name = SPrbs 
+description = Meta package module with shared code
+core = 7.x
+version = 1.0
+package = sprbs

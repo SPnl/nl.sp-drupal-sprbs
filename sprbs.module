@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ * @return array Menu items
+ */
+function sprbs_menu() {
+  $items = array();
+
+  $items['admin/config/sp'] = array(
+    'title'            => 'SP',
+    'description'      => 'SP-specifieke instellingen',
+    'weight'           => -8,
+    'access callback' => sprbs_access_check,
+  );
+
+  return $items;
+}
+
+function sprbs_access_check() {
+  global $user;
+  if (in_array('administrator', $user->roles)) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+
+
