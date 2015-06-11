@@ -11,19 +11,9 @@ function sprbs_menu() {
     'title'            => 'SP',
     'description'      => 'SP-specifieke instellingen',
     'weight'           => -8,
-    'access callback' => sprbs_access_check,
-  );
+    'access callback'  => 'user_access',
+    'access argument'  => array('administer site configuration'),
+   );
 
   return $items;
 }
-
-function sprbs_access_check() {
-  global $user;
-  if (in_array('administrator', $user->roles)) {
-    return TRUE;
-  }
-  return FALSE;
-}
-
-
-
