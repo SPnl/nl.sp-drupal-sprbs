@@ -11,9 +11,16 @@ function sprbs_menu() {
     'title'            => 'SP',
     'description'      => 'SP-specifieke instellingen',
     'weight'           => -8,
-    'access callback'  => 'user_access',
-    'access argument'  => array('administer site configuration'),
+    'access callback' => 'sprbs_access_check',
    );
 
   return $items;
+}
+
+function sprbs_access_check() {
+  global $user;
+  if (user_access('administer site configuration')) {
+    return TRUE;
+  }
+  return FALSE;
 }
