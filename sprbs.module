@@ -6,16 +6,20 @@
  */
 function sprbs_menu() {
   $items = array();
-
   $items['admin/config/sp'] = array(
-    'title'            => 'SP',
-    'description'      => 'SP-specifieke instellingen',
-    'weight'           => -8,
+    'title' => "SP",
+    'description' => "SP-specifieke instellingen",
+    'position' => 'right',
+    'weight' => -5,
     'access callback' => 'sprbs_access_check',
-   );
+    'page callback' => 'system_admin_menu_block_page',
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );
 
   return $items;
 }
+
 
 function sprbs_access_check() {
   global $user;
