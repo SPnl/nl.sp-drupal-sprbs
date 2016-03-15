@@ -18,9 +18,5 @@ function sprbs_menu() {
 }
 
 function sprbs_access_check() {
-  global $user;
-  if (user_access('administer site configuration')) {
-    return TRUE;
-  }
-  return FALSE;
+  return (user_access('administer site configuration'));
 }
