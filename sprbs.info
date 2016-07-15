@@ -1,5 +1,7 @@
 name = SPRBS
-description = Meta package module with shared code
+description = Main module for SPRBS package with shared code
 core = 7.x
-version = 1.0
+version = 1.1
 package = sprbs
+dependencies[] = composer_manager
+dependencies[] = xautoload

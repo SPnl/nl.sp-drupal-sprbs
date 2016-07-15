@@ -20,7 +20,9 @@ function sprbs_menu() {
   return $items;
 }
 
-
+/**
+ * @return bool Has SPRBS configuration access
+ */
 function sprbs_access_check() {
   return (user_access('administer site configuration'));
 }

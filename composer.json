@@ -1,0 +1,13 @@
+{
+	"name": "civicoop/sp-drupal-sprbs",
+	"description": "Main module for SPRBS package with shared code. This module also lists Composer dependencies for several modules that don't have Composer/Xautoload support yet, so these libraries can be more easily maintained and autoloaded.",
+	"license": "AGPL-3.0",
+	"homepage": "https://github.com/SPnl/nl.sp.drupal-sprbs",
+	"require": {
+		"swiftmailer/swiftmailer": "^5.2",
+		"ckeditor/ckeditor": "^4.5",
+		"bshaffer/oauth2-server-php": "^1.8",
+		"mustangostang/spyc": "^0.5",
+		"predis/predis": "^1.0"
+	}
+}
