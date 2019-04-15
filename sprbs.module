@@ -24,5 +24,17 @@ function sprbs_menu() {
  * @return bool Has SPRBS configuration access
  */
 function sprbs_access_check() {
-  return (user_access('administer site configuration'));
+  return (user_access('administer site configuration') || user_access('administer sp modules'));
+}
+
+/**
+ * Definces permission to administer webformsync.
+ */
+function sprbs_permission() {
+  return array(
+    'administer sp modules' => array(
+      'title' => 'Toegang tot SP beheer',
+      'description' => 'De toegang tot de items onder SP beheer is afzonderlijk in te stellen per module.'
+    ),
+  );
 }
